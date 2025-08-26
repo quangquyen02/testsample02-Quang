@@ -4,21 +4,341 @@
     padding: 0;
     box-sizing: border-box;
 }
-.nav{
-    background-color:rgba(197, 195, 195, 0.8);
-    min-height: 100px;
+:root
+{
+    --color-main: #F5AB48;
+    --text-white:#fff;
+    --font-family: Helvetica, Arial, sans-serif;
+    --container-width:1000px;
+    --color-sub1: #54A029;
+
 }
+/* Header */
+#header
+{
+    background-image: url(/assets/img/banner.jpg);
+    background-size: cover;
+    height: 100vh;
+    border-bottom: 5px solid #C4C4C4;
+}
+/* Header - Nav */
 .nav__container
 {
-    padding: 48px;
-    margin: 10px;
+    padding: 18px;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    right:0;
+    left: 0;
+    background: #00000052;
 }
 .nav__list
 {
     display: flex;
     align-items: center;
     list-style-type: none;
+    gap: 30px;
+    line-height: 47px;
+}
+.nav__list a 
+{
+    color: var(--text-white);
+    text-decoration: none;
+    font-family: var(--font-family);
+
+}
+.nav__list li:not(:last-child) a:hover{
+    color: var(--color-main);
+    border-bottom: 2px solid var(--color-main);
+}
+.nav__list .contact-btn 
+{
+    background-color: var(--color-main);
+    padding: 16px 25px;
+    border-radius: 15px;
+}
+.nav__list .contact-btn:hover
+{
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+/* Header - Banner */
+.banner
+{
+    width: 1200px;
+    font-family: var(--font-family);
+    margin: 0 auto;
+
+
+}
+.banner-container
+{
+    width: 60%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    justify-content: center;    
+    transform: translateY(40px);
+}
+.banner h3 
+{
+    color: var(--color-main);
+}
+.banner h1
+{
+    color: var(--text-white);
+
+}
+.banner p 
+{
+    color: var(--text-white);
+}
+.banner-btn
+{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.banner-btn a
+{
+    text-decoration: none;
+    font-family: var(--font-family);
+    color: var(--text-white);
+}
+.banner-btn .discover-btn
+{
+    background-color: var(--color-main);
+    padding: 10px;
+    border-radius: 10px;
+}
+.banner-btn .discover-btn:hover
+{
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+.banner-btn .play-btn
+{
+
+    background-color: var(--color-main);
+    padding: 8px;
+    border-radius: 100%;
+}
+.banner-btn .play-btn:hover
+{
+    opacity: 80%;
+    transition: all 0.3s ease;
+}
+.banner-btn .watch-btn:hover
+{
+    color: var(--color-main);
+}
+
+/* Main */
+/* Main Section*/
+.main__container {
+    width: var(--container-width);
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+/* Main-Inspiration  */
+.inspiration {
+    display: flex;
+    gap: 4rem;
+}
+
+.inspiration__images {
+    position: relative;
+    /* width: 100%;  */
+    min-width: 536px;
+    height: 540px;
+}
+
+.inspiration__images img {
+    object-fit: cover;
+}
+
+.inspiration__icons {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    z-index: 15;
+}
+.inspiration__icon1 {
+    position: absolute;
+    z-index: 17;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+.inspiration__icon2 {
+    position: absolute;
+    z-index: 16;
+    top: 50%;
+    left: 0;
+    transform: translate(-14%, -50%);
+}
+.inspiration__icon3 {
+    position: relative;
+    left: -30%;
+    opacity: 0.4;
+}
+
+.inspiration__image1 {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: 10;
+    width: 300px;
+    height: 440px;
+}
+
+.inspiration__image2 {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    z-index: 11;
+    width: 335.38507080078125px;
+    height: 314.9825134277344px;
+}
+
+.inspiration__image3 {
+    position: absolute;
+    right: 10%;
+    top: 13%;
+    z-index: 1;
+}
+
+.inspiration__content span {
+    color: var(--color-main);
+    font-family: var(--font-family);
+    letter-spacing: 0.7rem;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    gap: 1rem;
+}
+
+.inspiration__content h1 {
+    font-weight: 700;
+    font-size: 48px;
+    font-family: var(--font-family);
+    line-height: 60px;
+    margin-top: 20px;
+}
+
+.inspiration__content p {
+    font-weight: 400;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--text-secondary);
+    padding: 3rem 0 2rem 0;
+}
+.inspiration__content a:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.inspiration__checklist {
+    margin-bottom: 3rem;
+}
+.inspiration__checklist-item 
+{
+    margin-top: 20px;
+}
+.inspiration__content a {
+    text-decoration: none;
+    font-family: var(--font-family);
+    color: var(--text-white);
+    background: var(--color-sub1);
+    border-radius: 3px;
+    padding: 20px 50px;
+    font-weight: 700;
+    line-height: 21px;
+    font-size: 15px;
+}
+
+/* Mission */
+.mission
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+.mission__content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.mission__content span
+
+{
+    color: var(--color-main);
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+.mission__content h1
+{
+    font-family: var(--font-family);
+    margin-bottom: 20px;
+}
+.mission__content p
+{
+    font-family: var(--font-family);
+    text-align: center;
+    line-height: 28px;
+}
+.mission__block {
+    display: flex;
+    justify-content: center; /* căn giữa */
+    gap: 40px; /* khoảng cách đều giữa các item */
+    margin-top: 20px;
+}
+
+.mission__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     gap: 10px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+/* line xám */
+.mission__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: -20px;
+    width: 1px;
+    height: 60%;
+    background: #D2D5D9;
+}
+
+/* Active */
+.mission__item--active {
+    background-color: var(--color-sub1);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--text-white);
+}
+
+/* Card có shadow */
+.mission__item--shadow {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    background: #fff;
 }
