@@ -221,4 +221,175 @@
   .blog__title p {
     font-size: 12px;
   }
+
+  /* Contact */
+  .contactus__container {
+    flex-direction: column;
+    margin: 10px;
+  }
+  .contactus__title span {
+    font-size: 20px;
+  }
+  .contactus__title h1 {
+    font-size: 24px;
+  }
+  .contactus__left p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .contactus__right {
+    margin: 10px;
+  }
+  .check-list {
+    list-style: none;
+    width: fit-content; /* khối ul có độ rộng đúng bằng nội dung */
+    margin: 0 auto; /* căn giữa khối ul */
+    padding: 0;
+  }
+  .check-list li {
+    margin: 8px;
+    text-align: left;
+  }
+  .decorative-wrapper {
+    margin-top: 50px;
+  }
+
+  /* Footer */
+  /* Footer responsive */
+  @media (max-width: 767px) {
+    footer {
+      height: auto;
+      padding: 2rem 1rem;
+    }
+
+    .footer__container {
+      position: static;
+      transform: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Logo */
+    .footer__logo {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .footer__logo img {
+      max-width: 180px;
+      height: auto;
+    }
+
+    .footer__items p {
+      width: 100%;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* Contact (Phone, Email, Address) */
+    .footer__items {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* căn giữa icon + text */
+      gap: 0.8rem;
+      text-align: center;
+    }
+
+    .footer__items li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center; /* icon + chữ căn giữa */
+    }
+
+    .footer__items li i {
+      font-size: 1.2rem;
+      color: var(--color-main);
+    }
+
+    /* Links */
+    .footer__links h3,
+    .footer__posts h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .footer__links ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer__links ul li a {
+      text-decoration: none;
+      color: var(--text-white);
+    }
+
+    /* Recent Post */
+    .footer__posts-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    .footer__posts-items img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .footer__postItem-content {
+      text-align: center;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    /* Social + Contact */
+    .footer__social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .footer__social-icon {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 0 auto;
+    }
+
+    /* Icon góc thu nhỏ */
+    .footer__icon1,
+    .footer__icon2 {
+      width: 60px;
+      height: auto;
+      opacity: 0.6;
+    }
+
+    .footer__icon1 {
+      bottom: 0;
+      left: 0;
+    }
+
+    .footer__icon2 {
+      top: 0;
+      right: 0;
+    }
+  }
 }
