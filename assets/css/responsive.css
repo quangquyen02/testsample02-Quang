@@ -15,7 +15,7 @@
   .nav__container {
     width: 90%;
     display: flex;
-    align-items: center; /* căn giữa logo và icon menu */
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -24,7 +24,7 @@
     justify-content: center;
   }
   .banner {
-    padding-top: 120px; /* để tránh bị nav che */
+    padding-top: 120px;
     text-align: center;
     height: auto;
   }
@@ -223,6 +223,7 @@
   .contactus__container {
     flex-direction: column;
     margin: 10px;
+    align-items: center;
   }
   .contactus__title span {
     font-size: 20px;
@@ -239,8 +240,8 @@
   }
   .check-list {
     list-style: none;
-    width: fit-content; /* khối ul có độ rộng đúng bằng nội dung */
-    margin: 0 auto; /* căn giữa khối ul */
+    width: fit-content;
+    margin: 0 auto;
     padding: 0;
   }
   .check-list li {
@@ -271,7 +272,7 @@
   html,
   body {
     max-width: 100%;
-    overflow-x: hidden; /* chặn kéo ngang */
+    overflow-x: hidden;
   }
   * {
     box-sizing: border-box;
@@ -283,15 +284,15 @@
   .nav__container {
     width: 90%;
     display: flex;
-    align-items: center; /* căn giữa logo và icon menu */
+    align-items: center;
     justify-content: space-between;
   }
 
   .nav__list {
-    display: none; /* ban đầu ẩn menu */
+    display: none;
     flex-direction: column;
     position: absolute;
-    top: 92px; /* ngay dưới header */
+    top: 92px;
     right: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
@@ -301,7 +302,7 @@
   }
 
   .nav__list.active {
-    display: flex; /* khi bấm menu thì hiện */
+    display: flex;
   }
 
   .line__menu {
@@ -336,7 +337,7 @@
 
   /* Banner */
   .banner {
-    padding-top: 120px; /* để tránh bị nav che */
+    padding-top: 100px;
     text-align: center;
     height: auto;
   }
@@ -534,6 +535,7 @@
   .contactus__container {
     flex-direction: column;
     margin: 10px;
+    align-items: center;
   }
   .contactus__title span {
     font-size: 20px;
@@ -550,8 +552,8 @@
   }
   .check-list {
     list-style: none;
-    width: fit-content; /* khối ul có độ rộng đúng bằng nội dung */
-    margin: 0 auto; /* căn giữa khối ul */
+    width: fit-content;
+    margin: 0 auto;
     padding: 0;
   }
   .check-list li {
@@ -562,8 +564,12 @@
     margin: 50px auto;
     width: 400px;
   }
-  .img-box img2 {
-    width: 50%;
+  .img2 {
+    width: 270px;
+  }
+  .img1 {
+    width: 220px;
+    left: 35px;
   }
 
   /* Footer */
@@ -605,7 +611,7 @@
   .footer__items {
     display: flex;
     flex-direction: column;
-    align-items: center; /* căn giữa icon + text */
+    align-items: center;
     gap: 0.8rem;
     text-align: center;
   }
@@ -615,7 +621,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    justify-content: center; /* icon + chữ căn giữa */
+    justify-content: center;
   }
 
   .footer__items li i {

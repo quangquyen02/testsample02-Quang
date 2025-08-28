@@ -14,9 +14,9 @@
 #header {
   background-image: url(../img/banner.jpg);
   background-size: cover;
-  background-position: center; /* luôn căn giữa ảnh */
+  background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; /* luôn full màn hình */
+  min-height: 100vh;
   border-bottom: 5px solid #c4c4c4;
   position: relative;
 }
@@ -71,13 +71,13 @@ nav {
 }
 /* Header - Banner */
 .banner {
-  width: 100%; /* Cho full màn hình, tránh fix cứng 1200px */
-  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+  width: 100%;
+  height: 100vh;
   background: url("assets/img/banner-bg.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   font-family: var(--font-family);
-  padding: 0 20px; /* khoảng cách 2 bên */
+  padding: 0 20px;
 }
 
 .banner-container {
@@ -288,7 +288,7 @@ nav {
 }
 .mission__block {
   display: flex;
-  justify-content: center; /* căn giữa */
+  justify-content: center;
   gap: 40px; /* khoảng cách đều giữa các item */
   margin-top: 20px;
 }
@@ -811,7 +811,7 @@ nav {
   width: 50%;
   background: var(--text-white);
   padding: 40px;
-  margin-left: -100px; /* đè lên left-box */
+  margin-left: -100px;
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
   position: relative;
@@ -877,7 +877,7 @@ nav {
   background-color: var(--color-sub1);
   opacity: 0.9;
   position: relative;
-  overflow: hidden; /* tránh tràn icon */
+  overflow: hidden;
 }
 
 /* Icon bên trái */
@@ -1101,7 +1101,6 @@ nav {
   margin-bottom: 20px;
 }
 
-/* ========== LEFT & RIGHT CONTAINER ========== */
 .contactus__container {
   display: flex;
   justify-content: space-between;
@@ -1180,7 +1179,7 @@ nav {
 .green {
   width: 60px;
   height: 60px;
-  background: #4caf50;
+  background: var(--color-sub1);
   border-radius: 6px;
   position: absolute;
   top: -30px;
@@ -1192,7 +1191,7 @@ nav {
 .orange {
   width: 24px;
   height: 24px;
-  background: orange;
+  background: var(--color-main);
   border-radius: 4px;
   position: absolute;
   top: -40px;
@@ -1200,7 +1199,6 @@ nav {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* ========== CONTACT FORM ========== */
 .contactus__right {
   flex: 1;
   background: #faf8f6;
