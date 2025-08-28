@@ -5,49 +5,75 @@
   }
 }
 /* Tablet */
-/* Mobile */
-@media (max-width: 767px) {
-  /* Navigation */
+@media (max-width: 1023px) {
+  #header {
+    min-height: 80vh;
+  }
+  .nav__container {
+    width: 90%;
+    display: flex;
+    align-items: center; /* căn giữa logo và icon menu */
+    justify-content: space-between;
+  }
+
+  .nav__list {
+    display: none; /* ban đầu ẩn menu */
+    flex-direction: column;
+    position: absolute;
+    top: 92px; /* ngay dưới header */
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .nav__list.active {
+    display: flex; /* khi bấm menu thì hiện */
+  }
+
   .line__menu {
     display: block;
+    cursor: pointer;
   }
 
   .line__list {
     position: relative;
-    width: 25px;
-    height: 15px;
+    width: 30px;
+    height: 22px;
   }
 
   .line__list span {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: var(--text-white);
     border-radius: 2px;
+    transition: 0.3s;
   }
   .line__list span:nth-child(1) {
-    top: 12px;
+    top: 0;
   }
   .line__list span:nth-child(2) {
-    top: 18px;
+    top: 8px;
   }
   .line__list span:nth-child(3) {
-    top: 24px;
-  }
-  .nav__list {
-    display: none !important;
+    top: 16px;
   }
 
-  .nav__container {
-    width: 90%;
-  }
   /* Banner */
-  .banner-container {
-    margin-left: 20px;
+  .banner-btn {
+    justify-content: center;
   }
-  .banner-container h1 {
-    font-size: 3.2em;
+  .banner {
+    padding-top: 120px; /* để tránh bị nav che */
+    text-align: center;
+    height: auto;
+  }
+  .banner-container {
+    margin: 50px auto;
   }
   /* Inspiration */
   .inspiration {
@@ -68,15 +94,12 @@
     font-size: 12px;
   }
   .inspiration__images {
-    position: relative;
-    height: 300px;
-    width: 0;
-    margin: 3rem auto;
+    display: none;
   }
 
   /* Mission */
   .mission {
-    margin-top: 150px;
+    margin-top: 1px;
   }
   .mission__content h1 {
     font-size: 28px;
@@ -114,6 +137,9 @@
   .vision__content span {
     justify-content: center;
     font-size: 20px;
+  }
+  .vision__video img {
+    width: 100%;
   }
 
   /* Offer */
@@ -197,8 +223,21 @@
   .experience p {
     font-size: 12px;
   }
-
+  .fresh__container {
+    flex-direction: column-reverse;
+  }
+  .left-box {
+    width: 100%;
+    height: 200px;
+  }
+  .right-box {
+    width: 100%;
+    margin: 10px;
+  }
   /* Discover */
+  .discover {
+    margin-top: 80px;
+  }
   .discover__content h1 {
     font-size: 24px;
   }
@@ -207,6 +246,9 @@
   }
   .discover__content button a {
     font-size: 18px;
+  }
+  .discover__content {
+    width: 90%;
   }
   /* Blog */
   .blog__cards {
@@ -251,7 +293,439 @@
     text-align: left;
   }
   .decorative-wrapper {
-    margin-top: 50px;
+    margin: 50px auto;
+    width: 400px;
+  }
+  .img-box img2 {
+    width: 50%;
+  }
+
+  /* Footer */
+  /* Footer responsive */
+  footer {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .footer__container {
+    position: static;
+    transform: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Logo */
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer__logo img {
+    max-width: 180px;
+    height: auto;
+  }
+
+  .footer__items p {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  /* Contact (Phone, Email, Address) */
+  .footer__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* căn giữa icon + text */
+    gap: 0.8rem;
+    text-align: center;
+  }
+
+  .footer__items li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center; /* icon + chữ căn giữa */
+  }
+
+  .footer__items li i {
+    font-size: 1.2rem;
+    color: var(--color-main);
+  }
+
+  /* Links */
+  .footer__links h3,
+  .footer__posts h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .footer__links ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer__links ul li a {
+    text-decoration: none;
+    color: var(--text-white);
+  }
+
+  /* Recent Post */
+  .footer__posts-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .footer__posts-items img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .footer__postItem-content {
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* Social + Contact */
+  .footer__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer__social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+
+  /* Icon góc thu nhỏ */
+  .footer__icon1,
+  .footer__icon2 {
+    width: 60px;
+    height: auto;
+    opacity: 0.6;
+  }
+
+  .footer__icon1 {
+    bottom: 0;
+    left: 0;
+  }
+
+  .footer__icon2 {
+    top: 0;
+    right: 0;
+  }
+}
+/* Mobile */
+@media (max-width: 767px) {
+  /* Navigation */
+  #header {
+    min-height: 100vh;
+  }
+  .nav__container {
+    width: 90%;
+    display: flex;
+    align-items: center; /* căn giữa logo và icon menu */
+    justify-content: space-between;
+  }
+
+  .nav__list {
+    display: none; /* ban đầu ẩn menu */
+    flex-direction: column;
+    position: absolute;
+    top: 92px; /* ngay dưới header */
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .nav__list.active {
+    display: flex; /* khi bấm menu thì hiện */
+  }
+
+  .line__menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .line__list {
+    position: relative;
+    width: 30px;
+    height: 22px;
+  }
+
+  .line__list span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--text-white);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .line__list span:nth-child(1) {
+    top: 0;
+  }
+  .line__list span:nth-child(2) {
+    top: 8px;
+  }
+  .line__list span:nth-child(3) {
+    top: 16px;
+  }
+
+  /* Banner */
+  .banner {
+    padding-top: 120px; /* để tránh bị nav che */
+    text-align: center;
+    height: auto;
+  }
+  /* Inspiration */
+  .inspiration {
+    flex-direction: column-reverse;
+    margin-left: 10px;
+  }
+  .inspiration__content {
+    text-align: center;
+  }
+  .inspiration__content h1 {
+    font-size: 28px;
+  }
+  .inspiration__content span {
+    justify-content: center;
+    font-size: 20px;
+  }
+  .inspiration__content p {
+    font-size: 12px;
+  }
+  .inspiration__images {
+    display: none;
+  }
+
+  /* Mission */
+  .mission {
+    margin-top: 150px;
+  }
+  .mission__content h1 {
+    font-size: 28px;
+  }
+  .mission__content p {
+    font-size: 12px;
+  }
+  .mission__content span {
+    font-size: 20px;
+  }
+  .mission__block {
+    flex-direction: column;
+  }
+  .mission__item:not(:last-child)::after {
+    display: none;
+  }
+
+  /* Vision */
+  .vision {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  .vision__content {
+    text-align: center;
+  }
+  .vision__content p {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .vision__content h1 {
+    font-size: 24px;
+  }
+  .vision__content span {
+    justify-content: center;
+    font-size: 20px;
+  }
+  .vision__video img {
+    width: 100%;
+  }
+
+  /* Offer */
+  .offer__title span {
+    font-size: 20px;
+  }
+  .offer__title h1 {
+    font-size: 24px;
+  }
+  .offer__title p {
+    font-size: 12px;
+  }
+  .offer__content {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px;
+  }
+  .offer__content h2 {
+    font-size: 24px;
+  }
+  .offer__content p {
+    font-size: 12px;
+  }
+  /* Product */
+  .product {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px;
+  }
+
+  .product__title span {
+    justify-content: center;
+  }
+
+  .product__title {
+    text-align: center;
+  }
+  .product__title h1 {
+    width: 100%;
+    font-size: 24px;
+  }
+  .product__title span {
+    width: 100%;
+    font-size: 20px;
+  }
+  .product__title p {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .product__title button {
+    justify-content: center;
+  }
+
+  /* Testimonials */
+  .testi__title {
+    text-align: center;
+  }
+  .testi__title h1 {
+    font-size: 24px;
+  }
+  .testi__title span {
+    font-size: 20px;
+  }
+  .testi-card {
+    margin: 10px;
+  }
+
+  /* Freshproduct */
+  .right-box > span {
+    font-size: 20px;
+  }
+
+  .right-box > p {
+    font-size: 12px;
+  }
+  .right-box > h2 {
+    font-size: 24px;
+  }
+  .experience h2 {
+    font-size: 20px;
+  }
+  .experience p {
+    font-size: 12px;
+  }
+  .fresh__container {
+    flex-direction: column-reverse;
+  }
+  .left-box {
+    width: 100%;
+    height: 200px;
+  }
+  .right-box {
+    width: 100%;
+    margin: 10px;
+  }
+  /* Discover */
+  .discover {
+    margin-top: 80px;
+  }
+  .discover__content h1 {
+    font-size: 24px;
+  }
+  .discover__content p {
+    font-size: 12px;
+  }
+  .discover__content button a {
+    font-size: 18px;
+  }
+  .discover__content {
+    width: 90%;
+  }
+  /* Blog */
+  .blog__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog__title span {
+    font-size: 20px;
+  }
+  .blog__title h1 {
+    font-size: 24px;
+  }
+  .blog__title p {
+    font-size: 12px;
+  }
+
+  /* Contact */
+  .contactus__container {
+    flex-direction: column;
+    margin: 10px;
+  }
+  .contactus__title span {
+    font-size: 20px;
+  }
+  .contactus__title h1 {
+    font-size: 24px;
+  }
+  .contactus__left p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .contactus__right {
+    margin: 10px;
+  }
+  .check-list {
+    list-style: none;
+    width: fit-content; /* khối ul có độ rộng đúng bằng nội dung */
+    margin: 0 auto; /* căn giữa khối ul */
+    padding: 0;
+  }
+  .check-list li {
+    margin: 8px;
+    text-align: left;
+  }
+  .decorative-wrapper {
+    margin: 50px auto;
+    width: 400px;
+  }
+  .img-box img2 {
+    width: 50%;
   }
 
   /* Footer */

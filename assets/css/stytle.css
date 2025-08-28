@@ -14,8 +14,11 @@
 #header {
   background-image: url(../img/banner.jpg);
   background-size: cover;
-  height: 80vh;
+  background-position: center; /* luôn căn giữa ảnh */
+  background-repeat: no-repeat;
+  min-height: 100vh; /* luôn full màn hình */
   border-bottom: 5px solid #c4c4c4;
+  position: relative;
 }
 /* Header - Nav */
 nav {
@@ -68,18 +71,21 @@ nav {
 }
 /* Header - Banner */
 .banner {
-  width: 1200px;
+  width: 100%; /* Cho full màn hình, tránh fix cứng 1200px */
+  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+  background: url("assets/img/banner-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
   font-family: var(--font-family);
-  margin: 0 auto;
+  padding: 0 20px; /* khoảng cách 2 bên */
 }
+
 .banner-container {
-  width: 60%;
-  height: 70vh;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: center;
-  transform: translateY(40px);
 }
 .banner h3 {
   color: var(--color-main);
