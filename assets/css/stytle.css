@@ -59,8 +59,8 @@ nav {
 }
 .nav__list .contact-btn {
   background-color: var(--color-main);
-  padding: 16px 25px;
-  border-radius: 15px;
+  padding: 10px 25px;
+  border-radius: 4px;
 }
 .nav__list .contact-btn:hover {
   opacity: 0.8;
