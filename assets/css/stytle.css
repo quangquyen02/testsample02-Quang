@@ -6,7 +6,8 @@
 :root {
   --color-main: #f5ab48;
   --text-white: #fff;
-  --font-family: Helvetica, Arial, sans-serif;
+  --font-family: "DM Sans", sans-serif;
+  --font-nav: "MuseoModerno", sans-serif;
   --container-width: 1200px;
   --color-sub1: #54a029;
 }
@@ -22,8 +23,7 @@
 }
 /* Header - Nav */
 nav {
-  background: #000000;
-  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   padding: 18px;
   height: 92px;
@@ -51,15 +51,18 @@ nav {
 .nav__list a {
   color: var(--text-white);
   text-decoration: none;
-  font-family: var(--font-family);
+  font-family: var(--font-nav);
 }
 .nav__list li:not(:last-child) a:hover {
   color: var(--color-main);
   border-bottom: 2px solid var(--color-main);
+  transition: all 0.3s ease;
 }
 .nav__list .contact-btn {
   background-color: var(--color-main);
-  padding: 10px 25px;
+  min-width: 147px;
+  min-height: 47px;
+  padding: 5px 20px;
   border-radius: 4px;
 }
 .nav__list .contact-btn:hover {
@@ -92,9 +95,11 @@ nav {
 }
 .banner h1 {
   color: var(--text-white);
+  font-family: var(--font-family);
 }
 .banner p {
   color: var(--text-white);
+  font-family: ;
 }
 .banner-btn {
   display: flex;
@@ -108,8 +113,12 @@ nav {
 }
 .banner-btn .discover-btn {
   background-color: var(--color-main);
-  padding: 10px;
-  border-radius: 10px;
+  min-width: 160px;
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
 }
 .banner-btn .discover-btn:hover {
   opacity: 0.8;
@@ -117,7 +126,11 @@ nav {
 }
 .banner-btn .play-btn {
   background-color: var(--color-main);
-  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  min-height: 52px;
   border-radius: 100%;
 }
 .banner-btn .play-btn:hover {
@@ -126,6 +139,7 @@ nav {
 }
 .banner-btn .watch-btn:hover {
   color: var(--color-main);
+  transition: all 0.3s ease;
 }
 
 /* Main */
@@ -240,6 +254,7 @@ nav {
 }
 .inspiration__checklist-item {
   margin-top: 20px;
+  font-family: var(--font-family);
 }
 .inspiration__content a {
   text-decoration: none;
@@ -247,10 +262,13 @@ nav {
   color: var(--text-white);
   background: var(--color-sub1);
   border-radius: 3px;
-  padding: 20px 50px;
+  min-height: 58px;
+  min-width: 182px;
   font-weight: 700;
-  line-height: 21px;
   font-size: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Mission */
@@ -300,8 +318,8 @@ nav {
   align-items: center;
   position: relative;
   gap: 10px;
-  width: 150px;
-  height: 150px;
+  min-width: 208px;
+  min-height: 190px;
   text-align: center;
 }
 
@@ -356,12 +374,14 @@ nav {
 
 .vision__content h1 {
   font-size: 56px;
+  font-family: var(--font-family);
   font-weight: 700;
   line-height: 60px;
 }
 
 .vision__content p {
   font-size: 16px;
+  font-family: var(--font-family);
   font-weight: 400;
   line-height: 26px;
   text-align: justify;
@@ -382,6 +402,7 @@ nav {
   width: 184px;
   height: 58px;
   border-radius: 3px;
+  font-family: var(--font-family);
 }
 
 .vision__content a:hover {
@@ -469,6 +490,7 @@ nav {
 
 .offer__items-content {
   text-align: left;
+  font-family: var(--font-family);
 }
 
 .offer__items-content h2 {
@@ -534,13 +556,17 @@ nav {
 
 .product__title button a {
   text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: var(--text-white);
   background-color: var(--color-sub1);
   font-size: 18px;
   font-weight: 500;
-  line-height: 100%;
-  padding: 10px 40px;
+  min-width: 196px;
+  min-height: 59px;
   border-radius: 8px;
+  font-family: var(--font-family);
 }
 
 .product__title button a:hover {
@@ -564,6 +590,7 @@ nav {
   position: absolute;
   bottom: 0;
   padding: 2.5rem;
+  font-family: var(--font-family);
 }
 
 .product__items:hover {
@@ -592,6 +619,7 @@ nav {
   font-size: 24px;
   color: var(--text-white);
   text-decoration: none;
+  font-family: var(--font-family);
 }
 
 .product__items-content p {
@@ -600,6 +628,7 @@ nav {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 3rem;
+  font-family: var(--font-family);
 }
 
 .product__items-content button {
@@ -637,6 +666,7 @@ nav {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  font-family: var(--font-family);
 }
 .testi__title span {
   color: var(--color-main);
@@ -653,7 +683,10 @@ nav {
   font-family: var(--font-family);
   margin-bottom: 20px;
 }
-
+.testi-card h3,
+p {
+  font-family: var(--font-family);
+}
 /* Testi-grid */
 /* Grid */
 .testi-grid {
@@ -781,6 +814,10 @@ nav {
   height: 400px;
   background: url(../img/freshproduct1.jpg);
   position: relative;
+}
+.left-box h2,
+p {
+  font-family: var(--font-family);
 }
 
 /* Orange box (Years of experience) */
@@ -938,12 +975,16 @@ nav {
 
 .discover__content button a {
   text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: var(--text-white);
   font-family: var(--font-family);
   font-size: 16px;
   font-weight: 700;
   background: var(--color-main);
-  padding: 15px 35px;
+  min-height: 60px;
+  min-width: 190px;
   border-radius: 8px;
 }
 
@@ -1015,13 +1056,13 @@ nav {
   flex-direction: column;
   flex-grow: 1;
 }
-
 .blog__date {
   color: var(--color-sub1);
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 0.5rem;
   display: block;
+  font-family: var(--font-family);
 }
 
 .blog__content h3 {
@@ -1029,6 +1070,7 @@ nav {
   font-weight: 700;
   margin-bottom: 0.8rem;
   color: #222;
+  font-family: var(--font-family);
 }
 
 .blog__content p {
@@ -1036,6 +1078,7 @@ nav {
   color: #666;
   line-height: 1.5;
   flex-grow: 1;
+  font-family: var(--font-family);
 }
 
 .blog__footer {
@@ -1056,15 +1099,16 @@ nav {
   background: #48a11c;
   color: #fff;
   border: none;
-  width: 28px;
-  height: 28px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
-  margin: 10px;
+  margin: 0px 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .plus-btn:hover {
@@ -1130,6 +1174,7 @@ nav {
   margin-bottom: 12px;
   padding-left: 25px;
   position: relative;
+  font-family: var(--font-family);
 }
 
 .check-list li::before {
@@ -1232,18 +1277,19 @@ nav {
 
 .contactus__right button {
   background: var(--color-main);
+  font-family: var(--font-family);
   color: #fff;
   border: none;
-  padding: 12px 24px;
+  min-width: 150px;
+  min-height: 53px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: bold;
-  transition: background 0.3s;
 }
 
 .contactus__right button:hover {
   opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 /* Footer */
@@ -1346,6 +1392,7 @@ footer {
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 2rem;
+  font-family: var(--font-family);
 }
 
 .footer__links ul {
@@ -1387,6 +1434,7 @@ footer {
   font-weight: 400;
   font-size: 12px;
   color: #ffffff8d;
+  font-family: var(--font-family);
 }
 
 .footer__postItem-content h3 a {
@@ -1395,6 +1443,7 @@ footer {
   line-height: 100%;
   color: var(--text-white);
   text-decoration: none;
+  font-family: var(--font-family);
 }
 
 .footer__postItem-content h3 a:hover {
