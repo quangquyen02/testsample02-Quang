@@ -99,7 +99,7 @@ nav {
 }
 .banner p {
   color: var(--text-white);
-  font-family: ;
+  font-family: var(--font-family);
 }
 .banner-btn {
   display: flex;
