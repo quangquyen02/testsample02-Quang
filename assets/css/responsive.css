@@ -6,6 +6,29 @@
   .footer__container {
     width: 90%;
   }
+  /* Freshproduct */
+  .left-box {
+    width: 80%; /* Cho full chiều ngang */
+    height: 400px; /* Giảm chiều cao */
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 1400px) {
+  .mission__item {
+    min-width: 150px;
+    min-height: 150px;
+    gap: 5px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  /* Freshproduct */
+  .left-box {
+    width: 80%; /* Cho full chiều ngang */
+    height: 400px; /* Giảm chiều cao */
+    background-size: cover;
+    background-position: center;
+  }
 }
 /* Tablet */
 @media (max-width: 1023px) {
@@ -69,9 +92,17 @@
     display: none;
   }
   .mission__block {
-    width: 100%;
+    flex-wrap: wrap; /* Cho xuống hàng khi thiếu chỗ */
+    gap: 20px; /* Giảm khoảng cách */
   }
 
+  .mission__item {
+    min-width: 150px;
+    min-height: 150px;
+    gap: 5px;
+    font-size: 14px;
+    padding: 10px;
+  }
   /* Vision */
   .vision {
     flex-direction: column;
@@ -94,7 +125,7 @@
     font-size: 20px;
   }
   .vision__video img {
-    width: 100%;
+    min-width: 80%;
   }
 
   /* Offer */
@@ -187,7 +218,27 @@
   }
   .right-box {
     width: 100%;
+    height: 377px;
     margin: 10px;
+  }
+  .left-box {
+    width: 100%; /* Cho full chiều ngang */
+    height: 300px; /* Giảm chiều cao */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .experience {
+    bottom: -20px; /* Đẩy hộp lên một chút */
+    left: 20px;
+    padding: 20px 30px; /* Giảm padding */
+  }
+  .experience h2 {
+    font-size: 28px; /* Chữ nhỏ lại */
+  }
+
+  .experience p {
+    font-size: 12px;
   }
   /* Discover */
   .discover {
@@ -406,7 +457,7 @@
     font-size: 20px;
   }
   .vision__video img {
-    width: 100%;
+    min-width: 60%;
   }
 
   /* Offer */
@@ -501,6 +552,22 @@
     width: 100%;
     margin: 10px;
   }
+  .left-box {
+    height: 250px;
+  }
+
+  .experience {
+    bottom: -10px;
+    left: 10px;
+    padding: 15px 20px;
+  }
+  .experience h2 {
+    font-size: 24px;
+  }
+
+  .experience p {
+    font-size: 11px;
+  }
   /* Discover */
   .discover {
     margin-top: 80px;
@@ -573,7 +640,6 @@
   }
 
   /* Footer */
-  /* Footer responsive */
   footer {
     height: auto;
     padding: 2rem 1rem;
