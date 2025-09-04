@@ -8,8 +8,8 @@
   }
   /* Freshproduct */
   .left-box {
-    width: 80%; /* Cho full chiều ngang */
-    height: 400px; /* Giảm chiều cao */
+    width: 80%;
+    height: 400px;
     background-size: cover;
     background-position: center;
   }
@@ -24,10 +24,15 @@
   }
   /* Freshproduct */
   .left-box {
-    width: 80%; /* Cho full chiều ngang */
-    height: 400px; /* Giảm chiều cao */
+    width: 80%;
+    height: 400px;
     background-size: cover;
     background-position: center;
+  }
+  /* Product */
+  .prodcut__items {
+    max-width: 100%;
+    height: 300px;
   }
 }
 /* Tablet */
@@ -92,8 +97,8 @@
     display: none;
   }
   .mission__block {
-    flex-wrap: wrap; /* Cho xuống hàng khi thiếu chỗ */
-    gap: 20px; /* Giảm khoảng cách */
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
   .mission__item {
@@ -177,6 +182,10 @@
   .product__title button {
     justify-content: center;
   }
+  .prodcut__items {
+    max-width: 100%;
+    height: 300px;
+  }
 
   /* Testimonials */
   .testi__title {
@@ -229,12 +238,12 @@
   }
 
   .experience {
-    bottom: -20px; /* Đẩy hộp lên một chút */
+    bottom: -20px;
     left: 20px;
-    padding: 20px 30px; /* Giảm padding */
+    padding: 20px 30px;
   }
   .experience h2 {
-    font-size: 28px; /* Chữ nhỏ lại */
+    font-size: 28px;
   }
 
   .experience p {
@@ -457,7 +466,12 @@
     font-size: 20px;
   }
   .vision__video img {
-    min-width: 60%;
+    max-width: 100%;
+    max-height: 200px;
+  }
+  .vision__video svg {
+    max-width: 100%;
+    max-height: 80px;
   }
 
   /* Offer */
@@ -508,6 +522,10 @@
 
   .product__title button {
     justify-content: center;
+  }
+  .prodcut__items {
+    max-width: 100%;
+    height: 300px;
   }
 
   /* Testimonials */
