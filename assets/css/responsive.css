@@ -339,7 +339,7 @@
   }
   /* Navigation */
   #header {
-    min-height: 100vh;
+    min-height: 60vh;
   }
   .nav__container {
     width: 90%;
@@ -401,40 +401,79 @@
     text-align: center;
     height: auto;
   }
+
+  /* Main  */
+  .main__container {
+    padding-top: 3rem;
+  }
   /* Inspiration */
   .inspiration {
     flex-direction: column-reverse;
     margin-left: 10px;
   }
-  .inspiration__content {
-    text-align: center;
-  }
   .inspiration__content h1 {
     font-size: 28px;
+    line-height: 1.2;
+    margin-top: 0.5rem;
   }
   .inspiration__content span {
     justify-content: center;
     font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.5px;
   }
   .inspiration__content p {
     font-size: 12px;
+    margin: 0.5rem auto;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
   }
   .inspiration__images {
     display: none;
   }
+  .inspiration__checklist {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn cả khối vào giữa */
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .inspiration__checklist-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .inspiration__checklist-item svg {
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
 
   /* Mission */
   .mission {
-    margin-top: 80px;
+    margin-top: 3rem;
   }
   .mission__content h1 {
     font-size: 28px;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
   }
   .mission__content p {
     font-size: 12px;
+    margin: 0.5rem auto;
+    padding-top: 0;
   }
   .mission__content span {
     font-size: 20px;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.5px;
   }
   .mission__block {
     flex-direction: column;
@@ -448,7 +487,9 @@
   .vision {
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    padding-top: 1rem;
+    margin: 0;
+    gap: 1rem;
   }
   .vision__content {
     text-align: center;
@@ -456,7 +497,8 @@
   .vision__content p {
     text-align: center;
     font-size: 12px;
-    margin-top: 5px;
+    line-height: 1.5;
+    margin: 0.5rem;
   }
   .vision__content h1 {
     font-size: 24px;
@@ -464,6 +506,8 @@
   .vision__content span {
     justify-content: center;
     font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 1;
   }
   .vision__video img {
     max-width: 100%;
@@ -475,14 +519,21 @@
   }
 
   /* Offer */
+  .offer {
+    margin-top: 3rem;
+  }
   .offer__title span {
     font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.5px;
   }
   .offer__title h1 {
     font-size: 24px;
+    margin: 0;
   }
   .offer__title p {
     font-size: 12px;
+    margin-top: 0.5rem;
   }
   .offer__content {
     grid-template-columns: repeat(1, 1fr);
@@ -497,15 +548,18 @@
   /* Product */
   .product {
     grid-template-columns: repeat(1, 1fr);
-    margin: 10px;
   }
 
   .product__title span {
     justify-content: center;
+    margin-top: 0.5rem;
+    line-height: 1;
+    letter-spacing: 0.5px;
   }
 
   .product__title {
     text-align: center;
+    height: 30vh;
   }
   .product__title h1 {
     width: 100%;
@@ -518,17 +572,23 @@
   .product__title p {
     width: 100%;
     font-size: 12px;
+    margin: 0.5rem auto;
   }
 
   .product__title button {
     justify-content: center;
+    margin-top: 0.5rem;
   }
-  .prodcut__items {
+  .product__items {
     max-width: 100%;
     height: 300px;
   }
 
   /* Testimonials */
+  .testimonials {
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+  }
   .testi__title {
     text-align: center;
   }
@@ -537,12 +597,43 @@
   }
   .testi__title span {
     font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.5px;
   }
+  .testi-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+  }
+
   .testi-card {
-    margin: 10px;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .testi-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .arrows {
+    display: none;
+  }
+  .testi-controls {
+    display: none;
   }
 
   /* Freshproduct */
+  .freshproduct {
+    margin-top: -1rem;
+    padding: 1rem;
+  }
+  .fresh__container {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
   .right-box > span {
     font-size: 20px;
   }
@@ -588,7 +679,11 @@
   }
   /* Discover */
   .discover {
-    margin-top: 80px;
+    margin-top: 3rem;
+    height: 450px;
+  }
+  .discover img {
+    display: none;
   }
   .discover__content h1 {
     font-size: 24px;
@@ -608,6 +703,8 @@
   }
   .blog__title span {
     font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.5px;
   }
   .blog__title h1 {
     font-size: 24px;
@@ -621,12 +718,17 @@
     flex-direction: column;
     margin: 10px;
     align-items: center;
+    gap: 0;
   }
   .contactus__title span {
     font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.5px;
   }
   .contactus__title h1 {
     font-size: 24px;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
   .contactus__left p {
     font-size: 12px;
@@ -738,24 +840,22 @@
   /* Recent Post */
   .footer__posts-items {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     text-align: center;
   }
 
   .footer__posts-items img {
-    width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
+    gap: 0.5rem;
   }
 
   .footer__postItem-content {
     text-align: center;
-    width: 100%;
-    max-width: 250px;
+    width: 200px;
   }
 
   /* Social + Contact */
