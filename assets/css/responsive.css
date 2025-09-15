@@ -532,6 +532,9 @@
   .mission {
     margin-top: 3rem;
   }
+  .mission__content {
+    padding-top: 0;
+  }
   .mission__content h1 {
     font-size: 28px;
     line-height: 1.2;
@@ -571,7 +574,7 @@
   .vision__content p {
     text-align: center;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 28px;
     margin: 1rem;
   }
   .vision__content h1 {
@@ -641,6 +644,7 @@
     width: 100%;
     font-size: 24px;
     margin: 0;
+    margin-bottom: -1rem;
   }
   .product__title span {
     width: 100%;
@@ -650,6 +654,7 @@
     width: 100%;
     font-size: 12px;
     margin: 0.5rem auto;
+    line-height: 28px;
   }
 
   .product__title button {
@@ -718,10 +723,12 @@
   }
   .right-box > span {
     font-size: 20px;
+    line-height: 28px
   }
 
   .right-box > p {
     font-size: 12px;
+    color: black;
   }
   .right-box > h2 {
     font-size: 24px;
@@ -819,6 +826,8 @@
     font-size: 12px;
     text-align: center;
     margin: 0.5rem;
+    color: black;
+    line-height: 28px;
   }
   .contactus__right {
     margin: 10px;
